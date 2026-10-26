@@ -451,7 +451,8 @@ export const guides={
         "title": "Wilt and serve",
         "text": "Stir in the spinach for 2–3 minutes until wilted and the curry is steaming hot. Fluff the cooked rice with a fork and serve the curry over it."
       }
-    ]
+    ],
+    "description": "A gently spiced chickpea curry with soft spinach and fluffy rice."
   },
   "1": {
     "prep": 10,
@@ -487,7 +488,8 @@ export const guides={
         "title": "Serve",
         "text": "Rest the tray for 3 minutes, then divide chicken and vegetables between plates. Squeeze the remaining lemon over at the table."
       }
-    ]
+    ],
+    "description": "Lemony chicken, golden potatoes and roasted broccoli, all on one tray."
   },
   "2": {
     "prep": 10,
@@ -519,7 +521,8 @@ export const guides={
         "title": "Finish with feta",
         "text": "Crumble the measured feta over the warm couscous. Divide between bowls and serve. Check the feta and couscous labels before cooking."
       }
-    ]
+    ],
+    "description": "Sweet roasted vegetables, fluffy couscous and salty crumbled feta."
   },
   "3": {
     "prep": 5,
@@ -551,7 +554,8 @@ export const guides={
         "title": "Bring it together",
         "text": "Stir pasta into the sauce over low heat for 1 minute. Add a spoonful of reserved water at a time until the sauce coats the pasta. Serve steaming hot."
       }
-    ]
+    ],
+    "description": "A comforting tomato and lentil sauce that clings to your pasta."
   },
   "4": {
     "prep": 5,
@@ -583,7 +587,8 @@ export const guides={
         "title": "Build the bowls",
         "text": "Divide rice and vegetables between bowls. Check salmon carefully for bones, flake over the top and spoon over the measured soy sauce. Serve straight away."
       }
-    ]
+    ],
+    "description": "Oven-baked salmon, tender vegetables and rice in a simple bowl."
   },
   "5": {
     "prep": 10,
@@ -615,7 +620,8 @@ export const guides={
         "title": "Fill the potatoes",
         "text": "Carefully cut each potato open and fluff the inside with a fork. Spoon the steaming-hot bean mixture over and serve."
       }
-    ]
+    ],
+    "description": "A crisp-skinned baked potato filled with smoky tomato beans."
   },
   "6": {
     "prep": 10,
@@ -651,7 +657,8 @@ export const guides={
         "title": "Rest and serve",
         "text": "Take off the heat and stand for 2 minutes. Add a splash of hot water if thick, stir and serve in warm bowls."
       }
-    ]
+    ],
+    "description": "Creamy stirred rice with golden mushrooms and sweet peas."
   },
   "7": {
     "prep": 5,
@@ -683,7 +690,8 @@ export const guides={
         "title": "Combine and heat",
         "text": "Add drained hot rice and measured soy sauce. Stir together over medium-high heat for 2–3 minutes until steaming hot throughout. Serve immediately."
       }
-    ]
+    ],
+    "description": "A quick pan of rice, tender vegetables and fully cooked scrambled egg."
   },
   "8": {
     "prep": 5,
@@ -715,7 +723,8 @@ export const guides={
         "title": "Toss and serve",
         "text": "Add noodles and peanut sauce. Toss over medium heat for 1–2 minutes until steaming hot. Loosen with a splash of water if sticky, then divide between bowls."
       }
-    ]
+    ],
+    "description": "A creamy peanut sauce with chickpeas, peppers and rice noodles."
   },
   "9": {
     "prep": 5,
@@ -747,7 +756,8 @@ export const guides={
         "title": "Serve",
         "text": "Ladle stew into bowls and serve with toast. Check bread ingredients against your household exclusions."
       }
-    ]
+    ],
+    "description": "Soft butter beans in a thick tomato stew, with toast for dipping."
   },
   "10": {
     "prep": 3,
@@ -779,7 +789,8 @@ export const guides={
         "title": "Serve",
         "text": "Spoon into a bowl and top with the sliced banana. Let it cool to a comfortable eating temperature before serving to children."
       }
-    ]
+    ],
+    "description": "Creamy oats sweetened with banana and softened raisins."
   },
   "11": {
     "prep": 5,
@@ -811,7 +822,8 @@ export const guides={
         "title": "Serve or soften",
         "text": "Serve straight away for texture, or leave for 5 minutes so the oats soften. Keep yoghurt chilled until needed."
       }
-    ]
+    ],
+    "description": "A cool, no-cook bowl of plain yoghurt, berries and oats."
   },
   "12": {
     "prep": 3,
@@ -843,7 +855,8 @@ export const guides={
         "title": "Serve promptly",
         "text": "Divide eggs over toast and serve while hot. Allow the portion to cool slightly before serving to children."
       }
-    ]
+    ],
+    "description": "Soft, fully set scrambled eggs on golden toast."
   },
   "13": {
     "prep": 4,
@@ -875,7 +888,8 @@ export const guides={
         "title": "Serve",
         "text": "Spoon into bowls and let cool briefly. Check the temperature before serving to children."
       }
-    ]
+    ],
+    "description": "Grated apple and cinnamon stirred into warming porridge."
   },
   "14": {
     "prep": 7,
@@ -907,7 +921,8 @@ export const guides={
         "title": "Add tomatoes",
         "text": "Add tomatoes, reduce heat to medium and cook for 3–4 minutes until softened and steaming hot. Check potatoes are tender, then serve."
       }
-    ]
+    ],
+    "description": "Golden potato cubes with warm, softened tomatoes."
   },
   "15": {
     "prep": 3,
@@ -939,7 +954,8 @@ export const guides={
         "title": "Serve freshly cooked",
         "text": "Divide into bowls and cool to a comfortable eating temperature. Serve straight away; use the rice storage note for leftovers."
       }
-    ]
+    ],
+    "description": "A soft breakfast rice bowl with mashed banana and raisins."
   },
   "16": {
     "prep": 5,
@@ -971,7 +987,8 @@ export const guides={
         "title": "Serve promptly",
         "text": "Divide between bowls and serve warm or immediately after mixing. Do not leave rice sitting at room temperature; see the storage note if saving some."
       }
-    ]
+    ],
+    "description": "A fresh chickpea salad with cucumber, tomatoes and lemony rice."
   },
   "17": {
     "prep": 4,
@@ -1003,7 +1020,8 @@ export const guides={
         "title": "Rest and cut",
         "text": "Leave for 1 minute before cutting; the filling will be very hot. Slice into manageable pieces and serve."
       }
-    ]
+    ],
+    "description": "Golden toasted bread with melted cheddar and sliced tomato."
   },
   "18": {
     "prep": 7,
@@ -1035,7 +1053,8 @@ export const guides={
         "title": "Finish and serve",
         "text": "Add a splash of water if too thick and return to the heat until steaming hot. Taste and serve. Let children’s portions cool before eating."
       }
-    ]
+    ],
+    "description": "A simple lentil soup with sweet carrot and a soft, spoonable texture."
   },
   "19": {
     "prep": 7,
@@ -1067,7 +1086,8 @@ export const guides={
         "title": "Assemble",
         "text": "Divide hot rice between bowls, add cooked chicken, then avocado and cucumber. Serve promptly; check the rice storage note before saving leftovers."
       }
-    ]
+    ],
+    "description": "Freshly cooked chicken with avocado, cucumber and fluffy rice."
   },
   "20": {
     "prep": 7,
@@ -1099,7 +1119,8 @@ export const guides={
         "title": "Dress and serve",
         "text": "Combine potatoes, beans and spinach. Toss with measured oil and lemon juice, checking for pips. Divide between bowls and serve warm."
       }
-    ]
+    ],
+    "description": "Tender potatoes, warm butter beans and spinach with lemon dressing."
   },
   "21": {
     "prep": 10,
@@ -1131,7 +1152,8 @@ export const guides={
         "title": "Roll and serve",
         "text": "Fold the bottom edge up, tuck the sides in and roll firmly. Cut in half. Check hummus and wrap labels, especially sesame and gluten."
       }
-    ]
+    ],
+    "description": "A colourful hummus wrap with crunchy pepper, carrot and cucumber."
   },
   "22": {
     "prep": 7,
@@ -1163,7 +1185,8 @@ export const guides={
         "title": "Check and serve",
         "text": "Check chicken is fully cooked. Check the thickest piece with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again. Fluff rice and serve the skillet mixture over it."
       }
-    ]
+    ],
+    "description": "Juicy chicken and sweet peppers in a tomato sauce over rice."
   },
   "23": {
     "prep": 7,
@@ -1194,9 +1217,10 @@ export const guides={
       },
       {
         "title": "Check and serve",
-        "text": "Ensure mince is fully cooked throughout: Check the thickest piece with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again. Divide hot rice between bowls and spoon the beef sauce over."
+        "text": "Ensure mince is fully cooked throughout: Check the centre of the mince mixture with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again. Divide hot rice between bowls and spoon the beef sauce over."
       }
-    ]
+    ],
+    "description": "A quick beef and tomato sauce with grated carrot and fluffy rice."
   },
   "24": {
     "prep": 7,
@@ -1219,7 +1243,7 @@ export const guides={
       },
       {
         "title": "Cook the turkey",
-        "text": "Add turkey mince and increase heat to medium-high. Break into small pieces and fry for 5–6 minutes. Add tomatoes, reduce heat and simmer for 8–10 minutes. Check the thickest piece with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again."
+        "text": "Add turkey mince and increase heat to medium-high. Break into small pieces and fry for 5–6 minutes. Add tomatoes, reduce heat and simmer for 8–10 minutes. Check the centre of the mince mixture with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again."
       },
       {
         "title": "Cook pasta alongside",
@@ -1229,7 +1253,8 @@ export const guides={
         "title": "Finish the sauce",
         "text": "Stir spinach into sauce for 2 minutes until wilted. Fold in pasta, adding a spoonful of cooking water if needed. Check everything is steaming hot and serve."
       }
-    ]
+    ],
+    "description": "A simple turkey and tomato pasta with wilted spinach."
   },
   "25": {
     "prep": 7,
@@ -1262,7 +1287,8 @@ export const guides={
         "title": "Build the bowls",
         "text": "Divide potatoes between bowls and spoon the chicken, tomatoes and spinach over. Serve hot, allowing children’s portions to cool slightly."
       }
-    ]
+    ],
+    "description": "Freshly cooked chicken, soft potatoes, spinach and warm tomatoes."
   },
   "26": {
     "prep": 10,
@@ -1294,7 +1320,7 @@ export const guides={
       },
       {
         "title": "Let it simmer",
-        "text": "Bring to a gentle bubble, reduce heat and simmer uncovered for 20–25 minutes, stirring occasionally. Add water if it dries out. The sauce should be thick enough to coat pasta. Check the thickest piece with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again."
+        "text": "Bring to a gentle bubble, reduce heat and simmer uncovered for 20–25 minutes, stirring occasionally. Add water if it dries out. The sauce should be thick enough to coat pasta. Check the centre of the mince mixture with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again."
       },
       {
         "title": "Cook the spaghetti",
@@ -1406,7 +1432,7 @@ export const guides={
       },
       {
         "title": "Simmer the chilli",
-        "text": "Add tomatoes, beans and a splash of water. Bring to a bubble, reduce heat and simmer for 12–15 minutes until the sauce thickens. Stir frequently near the end. Check the thickest piece with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again."
+        "text": "Add tomatoes, beans and a splash of water. Bring to a bubble, reduce heat and simmer for 12–15 minutes until the sauce thickens. Stir frequently near the end. Check the centre of the mince mixture with a clean thermometer: hold 75°C for 30 seconds. If it is not there yet, keep cooking and check again."
       },
       {
         "title": "Serve",

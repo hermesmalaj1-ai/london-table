@@ -40,7 +40,7 @@ for(const r of recipes){
  r.guide=guides[r.id];
  r.minutes=r.guide.prep+r.guide.cook;
  r.steps=r.guide.steps.map(s=>s.title+': '+s.text);
- r.description=r.description||({breakfast:'An easy start to the morning, made with everyday ingredients.',lunch:'A simple homemade lunch to keep the day moving.',dinner:'A comforting dinner for your everyday table.'}[r.meals[0]]);
+ r.description=r.description||r.guide.description||({breakfast:'An easy start to the morning, made with everyday ingredients.',lunch:'A simple homemade lunch to keep the day moving.',dinner:'A comforting dinner for your everyday table.'}[r.meals[0]]);
 }
 for(const r of recipes)r.protein=r.ingredients.some(([n])=>['chicken breast','beef mince','turkey mince','beef steak'].includes(n))?'meat':r.ingredients.some(([n])=>n==='salmon')?'fish':'plant';
 export const mealTypes=['breakfast','lunch','dinner'];
