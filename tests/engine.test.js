@@ -60,3 +60,15 @@ test('meat variety fix preserves vegetarian, vegan, allergy and no-match behavio
  }
  const plan=generateWeek({diet:'omnivore',minutes:10,meals:['dinner']});assert.ok(plan.every(id=>id===null));
 });
+
+test('every recipe includes a complete structured cooking guide and consistent timings',()=>{
+ assert.equal(recipes.length,34);
+ for(const r of recipes){assert.ok(r.guide.equipment.length>=2,r.name);assert.ok(r.guide.steps.length>=5,r.name);assert.equal(r.minutes,r.guide.prep+r.guide.cook);for(const s of r.guide.steps){assert.ok(s.title.length>4);assert.ok(s.text.length>65,r.name+': '+s.title);}}
+ for(const name of ['Family spaghetti bolognese','Pan-seared steak, garlic potatoes & green beans'])assert.ok(recipes.some(r=>r.name===name));
+});
+test('bolognese has gluten screening and is preferred only within allowed time',async()=>{
+ const {eligible,generateWeek}=await import('../public/engine.js');const p={diet:'omnivore',minutes:60,meals:['dinner'],favourites:[26]};assert.equal(generateWeek(p,[],()=>0)[0],26);assert.ok(!eligible({...p,allergies:['gluten']}).some(r=>r.id===26));assert.ok(!eligible({...p,minutes:25}).some(r=>r.id===26));
+});
+test('overnight recipes show a separate waiting requirement and tap water is not a purchase',()=>{
+ const oats=recipes.find(r=>r.name==='Apple & yoghurt overnight oats');assert.match(oats.wait,/6 hours/);assert.ok(!shopping([oats.id],1).some(i=>i.name==='water'));
+});

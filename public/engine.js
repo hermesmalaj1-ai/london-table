@@ -1,3 +1,4 @@
+import {newRecipes,guides} from './cookbook.js';
 // Original recipes; prices and nutrition are illustrative estimates per serving.
 export const recipes = [
 ['Chickpea & spinach curry','vegan',25,580,2.1,[['chickpeas',200,'g',0.5],['spinach',80,'g',0.4],['rice',75,'g',0.2],['chopped tomatoes',200,'g',0.4],['curry paste',30,'g',0.6]],['Cook the rice following its packet instructions.','Simmer chickpeas, tomatoes and curry paste for 15 minutes.','Stir in spinach until wilted and serve with rice.'],'🍛'],
@@ -34,14 +35,21 @@ const additionalRecipes=[
 for(const [name,diet,minutes,kcal,cost,ingredients,steps,emoji,meal] of additionalRecipes){
  recipes.push({id:recipes.length,name,diet,minutes,kcal,cost,ingredients,steps,emoji,meals:[meal]});
 }
-for(const r of recipes)r.protein=r.ingredients.some(([n])=>['chicken breast','beef mince','turkey mince'].includes(n))?'meat':r.ingredients.some(([n])=>n==='salmon')?'fish':'plant';
+for(const recipe of newRecipes)recipes.push({...recipe,id:recipes.length,steps:[]});
+for(const r of recipes){
+ r.guide=guides[r.id];
+ r.minutes=r.guide.prep+r.guide.cook;
+ r.steps=r.guide.steps.map(s=>s.title+': '+s.text);
+ r.description=r.description||({breakfast:'An easy start to the morning, made with everyday ingredients.',lunch:'A simple homemade lunch to keep the day moving.',dinner:'A comforting dinner for your everyday table.'}[r.meals[0]]);
+}
+for(const r of recipes)r.protein=r.ingredients.some(([n])=>['chicken breast','beef mince','turkey mince','beef steak'].includes(n))?'meat':r.ingredients.some(([n])=>n==='salmon')?'fish':'plant';
 export const mealTypes=['breakfast','lunch','dinner'];
 export function mealSlots(p){
  const selected=Array.isArray(p.meals)?mealTypes.filter(m=>p.meals.includes(m)):mealTypes;
  return Array.from({length:7},(_,day)=>selected.map(meal=>({day,meal}))).flat();
 }
 export function generateWeek(p,pantry=[],random=Math.random){
- const pools=new Map(mealTypes.map(meal=>[meal,eligible(p,meal).map(r=>({r,score:random()*1.5+r.ingredients.filter(i=>pantry.includes(i[0])).length*.7-r.cost*.12})).sort((a,b)=>b.score-a.score).map(x=>x.r.id)]));
+ const pools=new Map(mealTypes.map(meal=>[meal,eligible(p,meal).map(r=>({r,score:random()*1.5+r.ingredients.filter(i=>pantry.includes(i[0])).length*.7-r.cost*.12+(Array.isArray(p.favourites)&&p.favourites.includes(r.id)?3:0)})).sort((a,b)=>b.score-a.score).map(x=>x.r.id)]));
  const used=new Map(mealTypes.map(meal=>[meal,new Set()]));
  return mealSlots(p).map(({day,meal})=>{
   const pool=pools.get(meal);if(!pool.length)return null;
@@ -68,6 +76,7 @@ export const allergens = [
 // Includes recipe ingredients and conservative flags for variable compound ingredients.
 // These are recipe-screening tags, not verified product labels or cross-contact data.
 const ingredientAllergens = {
+ 'spaghetti':['gluten','eggs'],
  'oats':['gluten'], 'plain yoghurt':['milk'], 'cheddar':['milk'],
  'wraps':['gluten','milk','eggs','soya','sesame','lupin'], 'hummus':['sesame'],
  'raisins':['sulphites'],
@@ -92,10 +101,10 @@ export function eligible(p,meal='dinner'){
 }
 export function generate(p,pantry=[],random=Math.random){
  const pool=eligible(p); if(!pool.length) return [];
- const scored=pool.map(r=>({r,score:random()*1.5 + r.ingredients.filter(i=>pantry.includes(i[0])).length*.7-r.cost*.12})).sort((a,b)=>b.score-a.score);
+ const scored=pool.map(r=>({r,score:random()*1.5 + r.ingredients.filter(i=>pantry.includes(i[0])).length*.7-r.cost*.12+(Array.isArray(p.favourites)&&p.favourites.includes(r.id)?3:0)})).sort((a,b)=>b.score-a.score);
  return Array.from({length:7},(_,i)=>scored[i%scored.length].r.id);
 }
 export function shopping(plan,people,pantry=[]){
- const items=new Map();for(const id of plan){const r=recipes.find(r=>r.id===id);if(!r)continue;for(const [name,qty,unit,cost] of r.ingredients){if(pantry.includes(name))continue;const old=items.get(name)||{name,qty:0,unit,cost:0};old.qty+=qty*people;old.cost+=cost*people;items.set(name,old);}}
+ const items=new Map();for(const id of plan){const r=recipes.find(r=>r.id===id);if(!r)continue;for(const [name,qty,unit,cost] of r.ingredients){if(name==='water'||pantry.includes(name))continue;const old=items.get(name)||{name,qty:0,unit,cost:0};old.qty+=qty*people;old.cost+=cost*people;items.set(name,old);}}
  return [...items.values()].sort((a,b)=>a.name.localeCompare(b.name));
 }
